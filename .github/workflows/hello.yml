@@ -1,0 +1,14 @@
+name: hello
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello from GitHub Actions!"
+      - name: Print runner OS
+        run: echo "Runner OS is $RUNNER_OS"
